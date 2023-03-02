@@ -11,10 +11,13 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 
-const licencia = require('licencia');
+
+const licencias = require('../licencia');
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
+  data.licenseBadge = licencias[data.license]
   
   return `# ${data.title}
 
